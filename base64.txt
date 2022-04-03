@@ -1,0 +1,53 @@
+"""
+    base64解码函数
+
+"""
+# coding:utf-8
+# import pybase64
+
+def base64_decode(str_code):
+    """
+
+    :param str_code: 需要解码的参数
+    :return: 对整体数据进行一次解密后，再对value做一次解密
+    """
+    null = None   # 返回数据中有null，报错，需要预先定义处理
+    dic_code = eval(pybase64.b64decode(str_code.encode("utf-8")).decode())
+    for dis in dic_code.keys():
+        if dic_code[dis]:  # value:dic_code[dis] list格式非空进行二次解码
+            # print(type(dic_code[dis]))
+            # 类型处理
+            if isinstance(dic_code[dis], list):
+                # print(dic_code[dis])
+                for index, item in enumerate(dic_code[dis]):
+                    dic_code[dis][index] = pybase64.b64decode(item.encode("utf-8")).decode()
+            if isinstance(dic_code[dis], int):
+                print("int处理")
+            if isinstance(dic_code[dis], str):
+                dic_code[dis] = pybase64.b64decode(dic_code[dis].encode("utf-8")).decode()
+    return dic_code
+
+
+
+# """
+#     base64解码函数
+# """
+# # coding:utf-8
+# import pybase64
+#
+#
+# def base64_decode_all(str_code):
+#     """
+#
+#     :param str_code: 需要解码的参数
+#     :return: 对整体数据进行一次解密后，再对value做一次解密
+#     """
+#     null = None   # 返回数据中有null，报错，需要预先定义处理
+#     dic_code = eval(pybase64.b64decode(str_code.encode("utf-8")).decode())
+#     for dis in dic_code.keys():
+#         if dic_code[dis]:     # value:dic_code[dis] list格式非空进行二次解码s
+#             for index, item in enumerate(dic_code[dis]):
+#                 dic_code[dis][index] = pybase64.b64decode(item.encode("utf-8")).decode()
+#     return dic_code
+#
+#

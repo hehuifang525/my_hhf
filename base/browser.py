@@ -14,7 +14,7 @@ def open_browser(txt):
         option.add_argument('--headless')  # 无头模式，不会展示浏览器界面，某些场景下会失败
         option.add_experimental_option('excludeSwitches',['enable-automation'])  # 去掉默认的自动化提示信息
 
-        # 实现一个有缓存的浏览器1 chrome://version/ 取个人资料路径，该指令使用，必须关闭本地所有chrome浏览器
+        # 实现一个有缓存的浏览器12 chrome://version/ 取个人资料路径，该指令使用，必须关闭本地所有chrome浏览器
         # option.add_argument(r'--user-data-dir=C:\Users\56599\AppData\Local\Google\Chrome\User Data')
 
 

@@ -8,6 +8,7 @@ if __name__ == '__main__':
     dr.input("ceshi123",(By.ID,"kw"))
     dr.click((By.ID, "su"))
     dr.quit()
+    # 测试更新
 
 
 

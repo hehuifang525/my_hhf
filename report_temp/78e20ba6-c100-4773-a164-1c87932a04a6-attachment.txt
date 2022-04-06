@@ -1,0 +1,4 @@
+INFO     root:test_sjqd.py:56 启动浏览器
+INFO     root:test_sjqd.py:56 打开浏览器url
+INFO     root:test_sjqd.py:56 输入搜索值
+INFO     root:test_sjqd.py:56 点击搜索
